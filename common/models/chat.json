@@ -1,0 +1,39 @@
+{
+  "name": "chat",
+  "plural": "chats",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "feedback_id": {
+      "type": "belongsTo",
+      "model": "feedback",
+      "foreignKey": "feedbackID",
+      "options": {
+        "disableInclude": true
+      }
+    },
+    "user_id": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "userID",
+      "options": {
+        "disableInclude": true
+      }
+    },
+    "visitor_id": {
+      "type": "belongsTo",
+      "model": "visitor",
+      "foreignKey": "visitorID",
+      "options": {
+        "disableInclude": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
